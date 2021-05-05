@@ -2,19 +2,20 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 const PORT = 3001
-const http = require('http');
+const http = require('http');// we need http to start the websocket protocol .
 
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
 app.use(cors());
-const server = http.createServer(app)
+const server = http.createServer(app)// We Are connceting express app to http
+
+
 const io = require("socket.io")(server , {
   cors:{
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
-    // allowedHeaders: ["my-custom-header"],
-    // credentials: true
+    origin: "http://localhost:3000",   //the server
+    methods: ["GET", "POST"],          //the methodes we call
+    
   }
 })
 
@@ -23,6 +24,14 @@ const io = require("socket.io")(server , {
 app.get('/', (req, res) => {
   res.send("working")
 });
+
+/*
+
+Now we going to start the conncetion with socket.io using 'io.on' Methode
+the documentation : https://socket.io/docs/v4/server-initialization/
+
+
+*/
 
 io.on('connection', (socket) => {
   console.log('a user connected');
