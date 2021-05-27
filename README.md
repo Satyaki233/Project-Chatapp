@@ -7,6 +7,8 @@
  and backend/server node.js app
  
  run
- #cd frontend and #cd server
- #npm install 
- #npm start
+ # cd frontend 
+ and
+ > cd server
+ % npm install 
+ # npm start

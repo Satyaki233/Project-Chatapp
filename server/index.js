@@ -13,7 +13,7 @@ const server = http.createServer(app)// We Are connceting express app to http
 
 const io = require("socket.io")(server , {
   cors:{
-    origin: "http://localhost:3000",   //the server
+    origin: "*",   //the server
     methods: ["GET", "POST"],          //the methodes we call
     
   }
