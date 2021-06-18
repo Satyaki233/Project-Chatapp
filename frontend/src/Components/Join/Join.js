@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
+import About from '../About/About';
 import './Join.css'
 
 const Join = () => {
@@ -14,8 +15,11 @@ const Join = () => {
      
     return (
         <div className="joinOuterContainer">
-           
+         <div className="introContainer">
+            <About/>
+        </div>
             <div className="joinInnerContainer">
+
             <h1 className="heading">Join</h1>
                 <div><input className="joinInput" placeholder="name" type='text' onChange={(event) => setName(event.target.value)} /></div>
                 <div><input className="joinInput mt-20" placeholder="room" type='text' onChange={(event) => setRoom(event.target.value)} /></div>

@@ -22,7 +22,60 @@
     justify-content: flex-end;
     margin-right: 5%;
   }
+
+  .middleInnerContainer{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+
+  .middleInnerContainer button{
+    padding:5px;
+    background:#2979FF;
+    font-size: 15px;
+    
+  }
+
+  
+.sidenav {
+  height: 100%;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.closebtn{
+  margin-right: 30px;
+}
   
   .onlineIcon {
     margin-right: 5%;
+  }
+  .activeContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50%;
+  }
+  
+  .activeItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .activeContainer img {
+    padding-left: 10px;
+  }
+   
+
+  @media  (min-width: 600px) {
+     .middleInnerContainer{
+       display:none;
+     }
   }

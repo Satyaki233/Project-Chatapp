@@ -9,7 +9,7 @@ import Chat from './Components/Chat/Chat'
 function App() {
   return (
    <Router>
-     <div className="App">
+     <div style={{height:'100%'}} >
      <Switch>
        <Route path="/" exact component={Join}/>
        <Route path="/Chat" component={Chat}/>

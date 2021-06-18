@@ -63,7 +63,7 @@ const Chat = ({location}) => {   // location comes from react- router
         setIsSend(true)
     
         if(message) {
-          socket.emit('sendMessage', message, () => setMessage(''));
+          socket.emit('sendMessage', message);
         }
       }
     if(isSend){
@@ -75,12 +75,13 @@ const Chat = ({location}) => {   // location comes from react- router
 
     return (
         <div className="outerContainer">
+        <TextContainer  users={users}/>
         <div className="container">
-            <InfoBar room={room} />
+            <InfoBar room={room} users={users} />
             <Messages messages={messages} name={name} />
             <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
         </div>
-        <TextContainer users={users}/>
+    
      
       </div>
     )
